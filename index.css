@@ -1,0 +1,275 @@
+#hometext{
+    display:grid;
+    margin:auto;
+    grid-template-columns: 640px 640px;
+}
+#hometext1{
+    text-align: center;
+    position: relative;
+    top:300px;
+}
+#sampic{
+    position: relative;
+    bottom:-100px;
+}
+#bar{
+    color:white;
+}
+
+#footertext1{
+    position:relative;
+    top:20px;
+    left: 570px;
+    font-weight: bold;
+    color: #000;
+}
+#footertext{
+  width: 700px;
+  height:100px;
+}
+.codepen-button {
+  display: block;
+  cursor: pointer;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+  
+}
+
+.codepen-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+  animation-play-state: paused;
+  /* translate: -5% 0%; */
+  transition: translate 0.25s ease-out;
+}
+
+.codepen-button:hover::before {
+  animation-play-state: running;
+  transition-duration: 0.75s;
+  /* translate: 0% 0%; */
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+.codepen-button span {
+  position: relative;
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  background:black;
+  border-radius: 3px;
+  height: 100%;
+
+}
+
+
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+  left: 2rem;
+  top: 2rem;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.1rem;
+  fill: currentColor;
+}
+
+/*-- Tooltip Social Media --*/
+.tooltip-social {
+  background: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.tooltip-social:after {
+  content: " ";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+  border-top-color: #262626;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+
+.typewriter{
+  color: black;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  overflow: hidden; 
+  border-right: 1px solid black; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  20% { border-color: black }
+}
+
+@media (max-width: 320px) {
+
+  #hometext1{
+    text-align: center;
+    position:relative;
+    top: 100px;
+    font-size: 8px;
+    right:2px;
+    
+    
+  }
+  
+#sampic {
+  display: flex;
+  flex-wrap: wrap;
+  width:120px;
+  height:120px;
+  position:relative;
+  top:120px;
+  left:80px;
+}
+
+#hometext{
+  display:flex;
+  margin:auto;
+  flex-wrap: wrap;
+}
+
+#project{
+  width:150px;
+  height:50px;
+  position:relative;
+  top:250px;
+  right:70px;
+
+}
+
+#social-media{
+  position:relative;
+  bottom: -10px;
+  
+}
+#projecttext{
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+
+}
+
+/* 
+@media (max-width: 375px) {
+
+  #hometext1{
+    text-align: center;
+    position:relative;
+    top: 100px;
+    font-size: 8px;
+    left: 25px;
+    
+  }
+  
+#sampic {
+  display: flex;
+  flex-wrap: wrap;
+  width:120px;
+  height:120px;
+  position:relative;
+  top:120px;
+  left:120px;
+}
+
+#hometext{
+  display:flex;
+  margin:auto;
+  flex-wrap: wrap;
+}
+
+#project{
+  width:150px;
+  height:50px;
+  position:relative;
+  top:250px;
+  right:63px;
+
+}
+
+#social-media{
+  position:relative;
+  bottom: -10px;
+  
+}
+#projecttext{
+  font-size: 0.5rem;
+  text-align: center;
+}
+#menu{
+  width:330px;
+  height: 100px; 
+}
+
+#headertext{
+  position: relative;
+  width:5px;
+}
+
+
+ 
+}  */
+
+
+ 
